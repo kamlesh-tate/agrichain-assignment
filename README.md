@@ -35,6 +35,8 @@ initialisation, web elements, test scenario etc).
 
         ----> I have written web automation script for below test case from the file ** Problem2_AutomationTestCase.txt ** and created automation framework::
 
+             src/test/java/com/example/problem2/kt      
+
             • Test Case ID: 1
             • Scenario: Valid Short String - Longest Non-Repeating Substring
         

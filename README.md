@@ -33,7 +33,7 @@ initialisation, web elements, test scenario etc).
             1.TestCases_Manual&Automation/Problem2_ManualTestCase.txt
             2.TestCases_Manual&Automation/Problem2_AutomationTestCase.txt
 
-        ----> I have written web automation script for below test case from the file ** Problem2_AutomationTestCase.txt ** and created automation framework::
+        ----> I have written web automation script for below test case from the file ** Problem2_AutomationTestCase.txt ** and created automation framework in the below path::
 
              src/test/java/com/example/problem2/kt      
 

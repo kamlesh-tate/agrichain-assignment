@@ -1,4 +1,4 @@
-Test Suite: Input Field Validation and Longest Substring Calculation
+Test Suite: Validation through automation testcases
 
 Test Environment:
 

@@ -1,0 +1,190 @@
+Test Suite: Input Field Validation and Longest Substring Calculation
+
+Test Environment:
+
+URL: https://agrichain.com/qa/input
+
+Browser: [ Chrome, Firefox, Edge, etc.]
+
+    • Test Case ID: 1
+    •Scenario: Valid Short String - Longest Non-Repeating Substring
+    • Steps:
+        ◦ In the input field, type: abcabcbb
+        ◦ Click the "Submit" button.
+    • Expected Result:
+        ◦ The page should take you to /qa/result.
+        ◦ The displayed output should clearly say: Output is: 3
+
+
+    • Test Case ID: 2
+    • Scenario: Does the system handle mixed-case letters correctly when finding the longest non-repeating part?
+    • Steps:
+        ◦ In the input field, type: AbCaB
+        ◦ Click the "Submit" button.
+    • Expected Result:
+        ◦ The page should take you to /qa/result.
+        ◦ The displayed output should be: Output is: 3
+
+
+    • Test Case ID: 3
+    • Scenario: What happens when all the characters in the string are completely unique?
+    • Steps:
+        ◦ In the input field, type: abcdef
+        ◦ Click the "Submit" button.
+    • Expected Result:
+        ◦ The page should take you to /qa/result.
+        ◦ The displayed output should be: Output is: 6
+
+
+    • Test Case ID: 4
+    • Scenario: How does the system behave if all the characters in the string are exactly the same?
+    • Steps:
+        ◦ In the input field, type: aaaaa
+        ◦ Click the "Submit" button.
+    • Expected Result:
+        ◦ The page should take you to /qa/result.
+        ◦ The displayed output should be: Output is: 1
+
+
+    • Test Case ID: 5
+    • Scenario: What happens if you try to submit the form without typing anything at all?
+    • Steps:
+        ◦ Leave the input field completely blank.
+        ◦ Click the "Submit" button.
+    • Expected Result:
+        ◦ You should stay on the same input page (/qa/input).
+        ◦ A clear error message should pop up, like: "Please enter text"
+
+
+    • Test Case ID: 6
+    • Scenario: Does the system accept input that's just a bunch of empty spaces?
+    • Steps:
+        ◦ In the input field, type five space characters (just hit your spacebar five times).
+        ◦ Click the "Submit" button.
+    • Expected Result:
+        ◦ You should remain on the input page.
+        ◦ An error message should be displayed, such as "Please enter valid text"
+
+
+    • Test Case ID: 7
+    • Scenario: Can you easily go back to the main input page from the result page using the "Back to Home" button?
+    • Steps:
+        ◦ After you've successfully submitted something and are looking at the result on /qa/result, find and click the "Back to Home" button or link.
+    • Expected Result:
+        ◦ The page should smoothly return to the input page (/qa/input).
+        ◦ The input field on the input page should be empty, ready for new text.
+
+
+    • Test Case ID: 8
+    • Scenario: Does the browser's refresh button work as expected on the input page?
+    • Steps:
+        ◦ In the input field, type some text (e.g., hello world).
+        ◦ Click your browser's "Refresh" button (or press F5).
+    • Expected Result:
+        ◦ The page should reload successfully.
+        ◦ The URL in the address bar should still be https://agrichain.com/qa/input.
+        ◦ The input field should be cleared and reset to its original empty state.
+
+    • Test Case ID: 9
+    	• Scenario: Successful login with valid credentials
+    	• Steps:
+    		◦ Go to /qa/login
+    		◦ Type demo into Username/Email
+    		◦ Type Demo123! into Password
+    		◦ Click Login
+    	• Expected Result:
+    		◦ Redirects to /qa/home
+    		◦ “Welcome, demo!” message is displayed
+
+
+    • Test Case ID: 10
+    	• Scenario: Login fails with wrong password
+    	• Steps:
+    		◦ Go to /qa/login
+    		◦ Type demo into Username/Email
+    		◦ Type wrong into Password
+    		◦ Click Login
+    	• Expected Result:
+    		◦ Stays on /qa/login
+    		◦ Inline error “Invalid username or password”
+
+
+    • Test Case ID: 11
+    	• Scenario: Login form validates missing fields
+    	• Steps:
+    		◦ Go to /qa/login
+    		◦ Leave both fields blank
+    		◦ Click Login
+    	• Expected Result:
+    		◦ Inline errors “Username required” and “Password required”
+
+
+    • Test Case ID: 12
+    	• Scenario: Logout returns user to login page
+    	• Steps:
+    		◦ Successfully log in as demo
+    		◦ Click Logout
+    	• Expected Result:
+    		◦ Redirects to /qa/login
+    		◦ Session ends (user cannot access /qa/home without logging in)
+
+
+    • Test Case ID: 13
+    	• Scenario: Successful registration of a new user
+    	• Steps:
+    		◦ Go to /qa/register
+    		◦ Enter unique newuser123 in Username
+    		◦ Enter new@example.com in Email
+    		◦ Enter ValidPass!23 in Password and Confirm Password
+    		◦ Click Register
+    	• Expected Result:
+    		◦ Redirects to /qa/login
+    		◦ Success message “Account created”
+
+
+    • Test Case ID: 14
+    	• Scenario: Registration fails with duplicate username
+    	• Steps:
+    		◦ Go to /qa/register
+    		◦ Enter existing demo in Username
+    		◦ Fill Email, Password, Confirm Password with valid data
+    		◦ Click Register
+    	• Expected Result:
+    		◦ Stays on /qa/register
+    		◦ Inline error “Username already taken”
+
+
+    • Test Case ID: 15
+    	• Scenario: Registration detects mismatched passwords
+    	• Steps:
+    		◦ Go to /qa/register
+    		◦ Fill Username and Email with valid data
+    		◦ Enter Abc123! in Password, Abc123 in Confirm Password
+    		◦ Click Register
+    	• Expected Result:
+    		◦ Stays on /qa/register
+    		◦ Inline error “Passwords do not match”
+
+
+    • Test Case ID: 16
+    	• Scenario: Registration validates email format
+    	• Steps:
+    		◦ Go to /qa/register
+    		◦ Fill Username and Password fields correctly
+    		◦ Enter not-an-email in Email
+    		◦ Click Register
+    	• Expected Result:
+    		◦ Stays on /qa/register
+    		◦ Inline error “Please enter a valid email address”
+
+
+    • Test Case ID: 17
+    	• Scenario: Registration enforces all required fields
+    	• Steps:
+    		◦ Go to /qa/register
+    		◦ Leave one or more required fields blank
+    		◦ Fill the others with valid data
+    		◦ Click Register
+    	• Expected Result:
+    		◦ Stays on /qa/register
+    		◦ Inline errors appear for each empty field

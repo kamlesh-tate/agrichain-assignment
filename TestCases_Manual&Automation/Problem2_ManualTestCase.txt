@@ -1,0 +1,71 @@
+Test Case ID: 01
+
+Scenario: Page Layout & Branding
+
+Steps: Open /qa/input
+
+Expected Result: Logo shows, "Agrichain" header centered, "Login/Register" links on top-right
+
+Test Case ID: 02
+
+Scenario: Placeholder & Label Text
+
+Steps: Inspect input box
+
+Expected Result: Placeholder reads "Enter String Input..."
+
+Test Case ID: 03
+
+Scenario: Responsive Design
+
+Steps: Resize browser to 320px, 768px, 1024px widths
+
+Expected Result: Layout adapts (no overlapping elements, input and button remain visible)
+
+Test Case ID: 04
+
+Scenario: Cross-Browser Visuals
+
+Steps: Repeat Test Case 01 in Chrome, Firefox, Safari, Edge
+
+Expected Result: All elements render consistently
+
+Test Case ID: 05
+
+Scenario: Keyboard Navigation / Focus Order
+
+Steps: Tab through page
+
+Expected Result: Focus ring moves: Logo → Input field → Submit → Login → Register
+
+Test Case ID: 06
+
+Scenario: Accessibility (Screen Reader)
+
+Steps: Use NVDA or VoiceOver on /qa/input
+
+Expected Result: Screen reader announces "Enter String Input edit box", "Submit button"
+
+Test Case ID: 07
+
+Scenario: Error Message Styling
+
+Steps: On /qa/input, click Submit with no text
+
+Expected Result: Error appears inline ("Please enter a string"), styled in red, accessible
+
+Test Case ID: 08
+
+Scenario: Logo Link
+
+Steps: Click the logo on /qa/result
+
+Expected Result: Navigates back to homepage (/qa/input)
+
+Test Case ID: 09
+
+Scenario: "Back to Home" Button Styling/Behavior
+
+Steps: On result page, hover and click Back to Home
+
+Expected Result: Button highlights on hover, returns to /qa/input

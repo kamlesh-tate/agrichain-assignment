@@ -1,0 +1,21 @@
+>>agrichain-framework
+    • pom.xml
+        ◦ Maven dependencies (Selenium, JUnit, WebDriverManager)
+    • src/
+        ◦ main/
+            ▪ java/
+                • com.example.problem1.kt/
+                    ◦ LongestSubstring.java  --> Problem 1
+        ◦ test/
+            ▪ java/
+                • com.example.problem2.kt/
+                    ◦ base/
+                        ▪ BaseTest.java (WebDriver setup & teardown)
+                    ◦ pages/
+                        ▪ InputPage.java (locators + actions for home page)         ---> Form File Problem2_AutomationTestCase.txt Automated -- > Test Case ID: 1  Scenario: Valid Short String - Longest Non-Repeating Substring
+
+                        ▪ ResultPage.java (locators + assertions for result page)   ---> Form File Problem2_AutomationTestCase.txt Automated -- > Test Case ID: 1  Scenario: Valid Short String - Longest Non-Repeating Substring
+                    ◦ tests/
+                        ▪ InputValidationTest.java (TestNG/JUnit test classes)      ---> Form File Problem2_AutomationTestCase.txt Automated -- > Test Case ID: 1   Scenario: Valid Short String - Longest Non-Repeating Substring
+    • README.md
+        ◦ Instruction and Details
